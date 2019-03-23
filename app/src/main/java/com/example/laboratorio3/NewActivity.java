@@ -33,17 +33,14 @@ public class NewActivity extends AppCompatActivity {
         }
 
         mButtonShare.setOnClickListener(v -> {
-            String text1 = nTextView.getText().toString();
-            String text2 = pTextView.getText().toString();
-            String text3 = mTextView.getText().toString();
-            String text4 = gTextView.getText().toString();
+            String textU = nTextView.getText().toString() + "\n";
+            textU = textU + pTextView.getText().toString() + "\n";
+            textU = textU + mTextView.getText().toString() + "\n";
+            textU = textU + gTextView.getText().toString();
             Intent sIntent = new Intent();
             sIntent.setType("text/plain");
-            sIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
-            sIntent.putExtra(Intent.EXTRA_TEXT, text1);
-            sIntent.putExtra(Intent.EXTRA_TEXT, text2);
-            sIntent.putExtra(Intent.EXTRA_TEXT, text3);
-            sIntent.putExtra(Intent.EXTRA_TEXT, text4);
+            sIntent.setAction(Intent.ACTION_SEND);
+            sIntent.putExtra(Intent.EXTRA_TEXT, textU);
             startActivity(sIntent);
         });
 
