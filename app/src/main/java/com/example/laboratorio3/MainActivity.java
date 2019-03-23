@@ -27,28 +27,28 @@ public class MainActivity extends AppCompatActivity {
         mButton.setOnClickListener(v -> {
             String name = nEdit.getText().toString();
             Intent mIntent = new Intent(MainActivity.this, NewActivity.class);
-            mIntent.putExtra(AppConstants.NAME_KEY, name);
+            mIntent.putExtra(AppConstants.TEXT_KEY, name);
             startActivity(mIntent);
         });
 
         mButton.setOnClickListener(v -> {
             String pass = pEdit.getText().toString();
             Intent mIntent = new Intent(MainActivity.this, NewActivity.class);
-            mIntent.putExtra(AppConstants.PASS_KEY, pass);
+            mIntent.putExtra(AppConstants.TEXT_KEY, pass);
             startActivity(mIntent);
         });
 
         mButton.setOnClickListener(v -> {
             String mail = mEdit.getText().toString();
             Intent mIntent = new Intent(MainActivity.this, NewActivity.class);
-            mIntent.putExtra(AppConstants.MAIL_KEY, mail);
+            mIntent.putExtra(AppConstants.TEXT_KEY, mail);
             startActivity(mIntent);
         });
 
         mButton.setOnClickListener(v -> {
             String gender = gEdit.getText().toString();
             Intent mIntent = new Intent(MainActivity.this, NewActivity.class);
-            mIntent.putExtra(AppConstants.GEN_KEY, gender);
+            mIntent.putExtra(AppConstants.TEXT_KEY, gender);
             startActivity(mIntent);
         });
     }

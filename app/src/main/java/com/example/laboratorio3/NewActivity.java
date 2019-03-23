@@ -26,10 +26,10 @@ public class NewActivity extends AppCompatActivity {
         mButtonShare = findViewById(R.id.btn_share);
 
         if (mIntent != null) {
-            nTextView.setText(mIntent.getStringExtra(AppConstants.NAME_KEY));
-            pTextView.setText(mIntent.getStringExtra(AppConstants.PASS_KEY));
-            mTextView.setText(mIntent.getStringExtra(AppConstants.MAIL_KEY));
-            gTextView.setText(mIntent.getStringExtra(AppConstants.GEN_KEY));
+            nTextView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY));
+            pTextView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY));
+            mTextView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY));
+            gTextView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY));
         }
 
         mButtonShare.setOnClickListener(v -> {
