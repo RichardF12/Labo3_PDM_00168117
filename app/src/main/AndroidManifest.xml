@@ -12,7 +12,7 @@
 
         <activity android:name=".NewActivity">
             <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
                 <data android:mimeType="text/plain"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>

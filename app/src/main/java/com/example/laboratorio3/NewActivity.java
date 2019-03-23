@@ -34,30 +34,53 @@ public class NewActivity extends AppCompatActivity {
 
         mButtonShare.setOnClickListener(v -> {
             String text1 = nTextView.getText().toString();
-            mIntent.setType("text/plain");
-            mIntent.setAction(Intent.ACTION_SEND);
-            mIntent.putExtra(Intent.EXTRA_TEXT, text1);
+            String text2 = pTextView.getText().toString();
+            String text3 = mTextView.getText().toString();
+            String text4 = gTextView.getText().toString();
+            Intent sIntent = new Intent();
+            sIntent.setType("text/plain");
+            sIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
+            sIntent.putExtra(Intent.EXTRA_TEXT, text1);
+            sIntent.putExtra(Intent.EXTRA_TEXT, text2);
+            sIntent.putExtra(Intent.EXTRA_TEXT, text3);
+            sIntent.putExtra(Intent.EXTRA_TEXT, text4);
+            startActivity(sIntent);
+        });
+
+       /*mButtonShare.setOnClickListener(v -> {
+            String text1 = nTextView.getText().toString();
+            Intent sIntent = new Intent();
+            sIntent.setType("text/plain");
+            sIntent.setAction(Intent.ACTION_SEND);
+            sIntent.putExtra(Intent.EXTRA_TEXT, text1);
+            startActivity(sIntent);
         });
 
         mButtonShare.setOnClickListener(v -> {
             String text2 = pTextView.getText().toString();
-            mIntent.setType("text/plain");
-            mIntent.setAction(Intent.ACTION_SEND);
-            mIntent.putExtra(Intent.EXTRA_TEXT, text2);
+            Intent sIntent = new Intent();
+            sIntent.setType("text/plain");
+            sIntent.setAction(Intent.ACTION_SEND);
+            sIntent.putExtra(Intent.EXTRA_TEXT, text2);
+            startActivity(sIntent);
         });
 
         mButtonShare.setOnClickListener(v -> {
             String text3 = mTextView.getText().toString();
-            mIntent.setType("text/plain");
-            mIntent.setAction(Intent.ACTION_SEND);
-            mIntent.putExtra(Intent.EXTRA_TEXT, text3);
+            Intent sIntent = new Intent();
+            sIntent.setType("text/plain");
+            sIntent.setAction(Intent.ACTION_SEND);
+            sIntent.putExtra(Intent.EXTRA_TEXT, text3);
+            startActivity(sIntent);
         });
 
         mButtonShare.setOnClickListener(v -> {
             String text4 = gTextView.getText().toString();
-            mIntent.setType("text/plain");
-            mIntent.setAction(Intent.ACTION_SEND);
-            mIntent.putExtra(Intent.EXTRA_TEXT, text4);
-        });
+            Intent sIntent = new Intent();
+            sIntent.setType("text/plain");
+            sIntent.setAction(Intent.ACTION_SEND);
+            sIntent.putExtra(Intent.EXTRA_TEXT, text4);
+            startActivity(sIntent);
+        });*/
     }
 }
