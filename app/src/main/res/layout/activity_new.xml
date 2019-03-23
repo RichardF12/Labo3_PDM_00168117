@@ -5,42 +5,38 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".NewActivity">
 
-    <EditText
-        android:id="@+id/username"
-        android:hint="@string/username_text"
+    <TextView
+        android:id="@+id/showname"
         android:textSize="@dimen/st_text_sz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/password"
-        android:hint="@string/pass_text"
+    <TextView
+        android:id="@+id/showpass"
         android:textSize="@dimen/st_text_sz"
         android:layout_marginTop="@dimen/st_marginT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/email"
-        android:hint="@string/email_text"
+    <TextView
+        android:id="@+id/showmail"
         android:textSize="@dimen/st_text_sz"
         android:layout_marginTop="@dimen/st_marginT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/gender"
-        android:hint="@string/gender_text"
+    <TextView
+        android:id="@+id/showgender"
         android:textSize="@dimen/st_text_sz"
         android:layout_marginTop="@dimen/st_marginT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/btn_send"
-        android:text="@string/btn_send"
+        android:id="@+id/btn_share"
+        android:text="@string/btn_share"
         android:textSize="@dimen/st_text_sz"
         android:layout_marginTop="@dimen/st_marginT"
         android:layout_width="wrap_content"
