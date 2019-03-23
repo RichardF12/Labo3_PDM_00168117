@@ -26,38 +26,38 @@ public class NewActivity extends AppCompatActivity {
         mButtonShare = findViewById(R.id.btn_share);
 
         if (mIntent != null) {
-            nTextView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY));
-            pTextView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY));
-            mTextView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY));
-            gTextView.setText(mIntent.getStringExtra(AppConstants.TEXT_KEY));
+            nTextView.setText(mIntent.getStringExtra(AppConstants.NAME_KEY));
+            pTextView.setText(mIntent.getStringExtra(AppConstants.PASS_KEY));
+            mTextView.setText(mIntent.getStringExtra(AppConstants.MAIL_KEY));
+            gTextView.setText(mIntent.getStringExtra(AppConstants.GEN_KEY));
         }
 
         mButtonShare.setOnClickListener(v -> {
-            String nametx = nTextView.getText().toString();
+            String text1 = nTextView.getText().toString();
             mIntent.setType("text/plain");
             mIntent.setAction(Intent.ACTION_SEND);
-            mIntent.putExtra(Intent.EXTRA_TEXT, nametx);
+            mIntent.putExtra(Intent.EXTRA_TEXT, text1);
         });
 
         mButtonShare.setOnClickListener(v -> {
-            String passtx = pTextView.getText().toString();
+            String text2 = pTextView.getText().toString();
             mIntent.setType("text/plain");
             mIntent.setAction(Intent.ACTION_SEND);
-            mIntent.putExtra(Intent.EXTRA_TEXT, passtx);
+            mIntent.putExtra(Intent.EXTRA_TEXT, text2);
         });
 
         mButtonShare.setOnClickListener(v -> {
-            String mailtx = mTextView.getText().toString();
+            String text3 = mTextView.getText().toString();
             mIntent.setType("text/plain");
             mIntent.setAction(Intent.ACTION_SEND);
-            mIntent.putExtra(Intent.EXTRA_TEXT, mailtx);
+            mIntent.putExtra(Intent.EXTRA_TEXT, text3);
         });
 
         mButtonShare.setOnClickListener(v -> {
-            String gentx = gTextView.getText().toString();
+            String text4 = gTextView.getText().toString();
             mIntent.setType("text/plain");
             mIntent.setAction(Intent.ACTION_SEND);
-            mIntent.putExtra(Intent.EXTRA_TEXT, gentx);
+            mIntent.putExtra(Intent.EXTRA_TEXT, text4);
         });
     }
 }
